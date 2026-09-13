@@ -16,7 +16,7 @@ import streamlit as st
 # Page config (sabse pehle call hona chahiye)
 # ---------------------------------------------------------------------------
 st.set_page_config(
-    page_title="CineMatch — Movie Recommender",
+    page_title="Movie Recommender System",
     page_icon="🎬",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -38,13 +38,23 @@ st.markdown(
         h1, h2, h3, p, span, label, .stMarkdown {
             color: #f5f0ff !important;
         }
-        .hero-title {
-            font-size: 2.6rem;
-            font-weight: 800;
-            background: linear-gradient(90deg, #ff9ecb, #b18cff, #8ec5ff);
+            .hero-title {
+            font-size: 3.4rem;
+            font-weight: 900;
+            letter-spacing: 1px;
+            background: linear-gradient(90deg, #ff6ec7, #ffb86c, #8ec5ff, #b18cff, #ff6ec7);
+            background-size: 300% 300%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 0;
+            animation: shimmer 6s ease-in-out infinite;
+            text-shadow: 0 0 30px rgba(177, 140, 255, 0.35);
+        }
+        @keyframes shimmer {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
         }
         .hero-subtitle {
             color: #cbb8ff !important;
@@ -154,7 +164,7 @@ def recommend(movie_title: str, movies: pd.DataFrame, similarity):
 # ---------------------------------------------------------------------------
 # UI
 # ---------------------------------------------------------------------------
-st.markdown('<p class="hero-title">🎬 CineMatch</p>', unsafe_allow_html=True)
+st.markdown('<p class="hero-title">🎬 MOVIE RECOMMENDER SYSTEM</p>', unsafe_allow_html=True)
 st.markdown(
     '<p class="hero-subtitle">Apni pasandeeda movie choose karo, hum tumhe milti-julti '
     "5 movies suggest karenge ✨</p>",
