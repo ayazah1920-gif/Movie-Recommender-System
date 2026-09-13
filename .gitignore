@@ -1,0 +1,16 @@
+# Secrets - kabhi commit mat karna
+.streamlit/secrets.toml
+
+# Raw dataset (bada hota hai, GitHub par push karne ki zaroorat nahi)
+data/*.csv
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+env/
+
+# OS / Editor
+.DS_Store
+.vscode/
