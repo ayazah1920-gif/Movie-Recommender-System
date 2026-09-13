@@ -38,22 +38,26 @@ st.markdown(
         h1, h2, h3, p, span, label, .stMarkdown {
             color: #f5f0ff !important;
         }
-            .hero-title {
-            font-size: 3.4rem;
+         .hero-title {
+            font-size: clamp(3rem, 9vw, 8.5rem);
+            line-height: 1.05;
             font-weight: 900;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
+            text-align: center;
+            word-wrap: break-word;
             background: linear-gradient(90deg, #ff6ec7, #ffb86c, #8ec5ff, #b18cff, #ff6ec7);
             background-size: 300% 300%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 0;
             animation: shimmer 6s ease-in-out infinite;
-            text-shadow: 0 0 30px rgba(177, 140, 255, 0.35);
+            text-shadow: 0 0 50px rgba(177, 140, 255, 0.55);
         }
         @keyframes shimmer {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
+    
         }
         }
         .hero-subtitle {
